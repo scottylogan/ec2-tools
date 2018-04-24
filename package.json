@@ -1,9 +1,30 @@
 {
-  "name": "scotty-scripts",
-  "version": "0.1.1",
-  "description": "My utilities",
+  "name": "ec2-tools",
+  "version": "0.0.1",
+  "description": "Various AWS EC2 utilities",
   "author": "Scotty Logan <swl@stanford.edu>",
   "license": "MIT",
+  "keywords": [
+    "aws",
+    "ec2",
+    "scripts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scottylogan/ec2-tools.git"
+  },
+  "bugs": {
+    "url": "http://github.com/scottylogan/ec2-tools/issues"
+  },
+  "bin": {
+    "ec2-create-ami": "lib/ec2-create-ami.js",
+    "ec2-images": "lib/ec2-images.js",
+    "ec2-instances": "lib/ec2-instances.js",
+    "ec2-old-images": "lib/ec2-old-images.js"
+  },
+  "engines": {
+    "node": ">= 8.9.3"
+  },
   "dependencies": {
     "aws-sdk": "^2.186.0",
     "chalk": "^1.1.3",
