@@ -1,6 +1,6 @@
 {
-  "name": "mybin",
-  "version": "1.0.0",
+  "name": "scotty-scripts",
+  "version": "0.1.0",
   "description": "My utilities",
   "author": "Scotty Logan <swl@stanford.edu>",
   "license": "MIT",
