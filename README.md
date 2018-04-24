@@ -1,10 +1,8 @@
-# Scotty's Random Scripts
+# EC2 Tools
 
-A set of scripts, mostly for working with AWS EC2.
+Some simple AWS EC2 tools, written in Node.js.
 
-## EC2 Scripts
-
-### ec2-create-ami [options] instance-id|name
+## ec2-create-ami [options] instance-id|name
 
 Create an AMI from a running EC2 instance identified either by
 instance ID, or by the `Name` tag.
@@ -17,7 +15,7 @@ instance ID, or by the `Name` tag.
 |-w/--wait       |_none_  |       |false  |Wait for AMI creation to finish|
 |-p/--profile    |string  |_none_ |AWS Profile to use|
 
-### ec2-images [options]
+## ec2-images [options]
 
 List EC2 AMIs (images).
 
@@ -37,7 +35,7 @@ List EC2 AMIs (images).
 |-s/--state      |string  |_none_ |Only show images in a specific state|
 |-u/--untagged   |_none_  |false  |Only show images with no Name tag|
 
-### ec2-instances [options]
+## ec2-instances [options]
 
 List EC2 instances.
 
@@ -49,32 +47,7 @@ List EC2 instances.
 If called as `ec2-running-instances` it will only show currently running instances; normall it shows all instances.
 
 
-### ec2-old-images
+## ec2-old-images
 
 Output a JSON representation of images that are more than 90 days old.
 
-## Password and Passphrase Scripts
-
-### passphrase
-
-Generate a four word passphrase.
-
-### pwgen
-
-Generate a password.
-
-|Option |Description|
-|-------|-----------|
-|-c     |Include capital / upper case letters|
-|-n     |Include numbers / digits|
-|-y     |Include punctuation|
-|-a     |Equivalent to `-c -n -y`|
-
-
-## Other Scripts
-
-### yubikey
-
-Update SSH Agent to use / not use the PKCS11 provider for Yubikey. Run
-`yubikey` after inserting or removing a Yubikey containing an SSH
-keypair. It will prompt for PIN / touch as required.
