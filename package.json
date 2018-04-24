@@ -1,0 +1,13 @@
+{
+  "name": "mybin",
+  "version": "1.0.0",
+  "description": "My utilities",
+  "author": "Scotty Logan <swl@stanford.edu>",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.186.0",
+    "chalk": "^1.1.3",
+    "cli": "^1.0.1",
+    "sprintf-js": "^1.1.1"
+  }
+}

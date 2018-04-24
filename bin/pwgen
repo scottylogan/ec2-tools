@@ -1,0 +1,45 @@
+#! /usr/bin/perl
+
+use Getopt::Std;
+
+sub HELP_MESSAGE() {
+  my $fh = shift;
+  printf $fh <<END_HELP;
+Usage: $0 \[-c\] \[-n\] \[-y\] \[length\]
+
+Create a password length characters long; length defaults to 8
+
+  -c  include capitals
+  -n  include numbers
+  -y  include punctuation
+  -a  include everything
+END_HELP
+}
+
+  
+$main::VERSION = 0.1;
+
+$Getopt::Std::STANDARD_HELP_VERSION = true;
+
+$lower = 'abcdefghijklmnopqrstuvwxyz';
+$upper = $lower;
+$upper =~ tr/[a-z]/[A-Z]/;
+
+
+$digits = '0123456789';
+
+$punc = '~!@#$%^&*()-_+=[{]}|;:/?.>,<';
+
+$pwchars = $lower;
+getopts('acdny');
+$pwchars .= $upper if ($opt_c || $opt_a);
+$pwchars .= $digits if ($opt_n || $opt_d || $opt_a);
+$pwchars .= $punc if ($opt_y || $opt_a);
+
+$len = ($#ARGV < 0)  ? 8 : $ARGV[0];
+$pw = '';
+for ($i = 0; $i < $len; $i++) {
+  $pw .= substr($pwchars, length($pwchars)*rand(), 1);
+}
+printf "%s\n", $pw;
+
