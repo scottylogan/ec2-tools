@@ -2,6 +2,21 @@
 
 Some simple AWS EC2 tools, written in Node.js.
 
+## ec2-run [options] ami-id
+
+Create a new EC2 instance in the default region
+
+|Option                     |Argument|Default  |Description|
+|---------------------------|--------|---------|-----------|
+|--region                   |string  |AWS config default|Region in which to create the instance|
+|--name                     |string  |_none_   |Name of the instance (used for the _Name_ tag)|
+|--user-data                |filename|_none_   |File to include as user data for the instance|
+|--iam-instance-profile     |ARN     |_none_   |instance profile to assign to new instance|
+|--security-group-ids       |string  |_none_   |comma separated list of security group IDs|
+|--subnet-id                |string  |_none_   |subnet ID|
+|_any run-instances options_|string|_none_|passed through to request|
+
+
 ## ec2-create-ami [options] instance-id|name
 
 Create an AMI from a running EC2 instance identified either by
