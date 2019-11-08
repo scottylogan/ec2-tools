@@ -20,7 +20,8 @@
     "ec2-create-ami": "lib/ec2-create-ami.js",
     "ec2-images": "lib/ec2-images.js",
     "ec2-instances": "lib/ec2-instances.js",
-    "ec2-old-images": "lib/ec2-old-images.js"
+    "ec2-old-images": "lib/ec2-old-images.js",
+    "ec2-run": "lib/ec2-run.js"
   },
   "engines": {
     "node": ">= 8.9.3"
