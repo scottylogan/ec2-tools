@@ -1,6 +1,6 @@
 {
   "name": "ec2-tools",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Various AWS EC2 utilities",
   "author": "Scotty Logan <swl@stanford.edu>",
   "license": "MIT",
